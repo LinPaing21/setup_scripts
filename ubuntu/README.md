@@ -21,7 +21,7 @@ Ensure you have administrative privileges (`sudo` access) to run this script.
 
 ## Installation
 
-1. Clone or download this repository to your local machine.
+1. Download the bash file(.sh) to your local machine.
 
 2. Make the script executable:
 
