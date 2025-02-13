@@ -74,10 +74,6 @@ sudo systemctl status mongod --no-pager
 sudo sed -i '/^#replication:/a replication:\n  replSetName: "rs0"' /etc/mongod.conf
 sudo sed -i 's/^  bindIp: .*$/  bindIp: 0.0.0.0/' /etc/mongod.conf
 sudo systemctl restart mongod
-
-# Initialize Replica Set
-mongosh --eval 'rs.initiate({_id: "rs0", members: [{ _id: 0, host: "127.0.0.1:27017" }]})'
-mongosh --eval 'rs.status()'
 print_blue "MongoDB Installation Done"
 
 print_blue "IDE and Postman Installation Started"
@@ -93,7 +89,7 @@ print_blue "Dart & Flutter Installation Started"
 # Dart & Flutter Installation
 sudo apt-get update -y && sudo apt-get upgrade -y;
 sudo apt-get install -y curl git unzip xz-utils zip libglu1-mesa
-sudo apt-get install libc6:amd64 libstdc++6:amd64 lib32z1 libbz2-1.0:amd64
+sudo apt-get install -y libc6:amd64 libstdc++6:amd64 lib32z1 libbz2-1.0:amd64
 
 mkdir -p ~/development
 curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.27.4-stable.tar.xz
@@ -118,13 +114,6 @@ print_blue "NVM & NPM Installation Started"
 sudo apt update
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 source ~/.bashrc
-
-nvm --version
-nvm install node
-nvm use node
-nvm alias default node
-node -v
-npm -v
 print_blue "NVM & NPM Installation Done"
 
 print_blue "Java(multiple versions) Installation Started"
