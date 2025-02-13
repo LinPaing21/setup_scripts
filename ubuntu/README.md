@@ -34,6 +34,22 @@ chmod +x ubuntu_developer_setup.sh
 ```bash
 ./ubuntu_developer_setup.sh
 ```
+4. Wrapping Up:
+
+Close terminal & open new terminal and then, finish mongodb replication and nvm, node installation
+```bash
+mongosh --eval 'rs.initiate({_id: "rs0", members: [{ _id: 0, host: "127.0.0.1:27017" }]})'
+mongosh --eval 'rs.status()'
+
+nvm --version
+nvm install node
+nvm use node
+nvm alias default node
+node -v
+npm -v
+
+sudo reboot
+```
 
 ## Usage
 
