@@ -92,8 +92,8 @@ sudo apt-get install -y curl git unzip xz-utils zip libglu1-mesa
 sudo apt-get install -y libc6:amd64 libstdc++6:amd64 lib32z1 libbz2-1.0:amd64
 
 mkdir -p ~/development
-curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.27.4-stable.tar.xz
-tar -xf flutter_linux_3.27.4-stable.tar.xz -C ~/development/
+curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.29.2-stable.tar.xz
+tar -xf flutter_linux_3.29.2-stable.tar.xz -C ~/development/
 
 echo 'export PATH="$PATH:$HOME/development/flutter/bin"' >> ~/.profile
 source ~/.profile
@@ -112,7 +112,7 @@ print_blue "Dart & Flutter Installation Done"
 print_blue "NVM & NPM Installation Started"
 # NVM & NPM Installation
 sudo apt update
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 source ~/.bashrc
 print_blue "NVM & NPM Installation Done"
 
